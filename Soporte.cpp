@@ -37,6 +37,14 @@ class Soporte : public Soldado{
 			}
 		}
 		
+		int getBlindaje(){
+			return this->blindaje=blindaje;
+		}
+		
+		int getCamuflaje(){
+			return this->camuflaje=camuflaje;
+		}
+		
 };
 
 #endif

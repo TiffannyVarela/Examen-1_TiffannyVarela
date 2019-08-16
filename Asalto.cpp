@@ -37,6 +37,14 @@ class Asalto : public Soldado{
 			}
 		}
 		
+		int getVelocidad(){
+			return this->velocidad=velocidad;
+		}
+		
+		int getFuerza_extra(){
+			return this->fuerza_extra=fuerza_extra;
+		}
+		
 };
 
 #endif

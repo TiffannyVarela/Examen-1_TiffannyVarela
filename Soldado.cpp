@@ -27,13 +27,13 @@ class Soldado{
 		}
 		
 		int getP_fuerza(){
-			return this->p_vida=p_fuerza;
+			return this->p_fuerza=p_fuerza;
 		}
-			
 			
 		string getNombre(){
 			return this->nombre.assign(nombre);
 		}
+			
 		
 		void setP_vida(int p_vida){
 			this->p_vida=p_vida;
@@ -42,6 +42,7 @@ class Soldado{
 			
 		virtual int Ataque(string)=0;
 		virtual void Defensa(int, string)=0;
+		
 	
 };
 

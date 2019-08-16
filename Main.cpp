@@ -87,11 +87,43 @@ int main(){
 				escribir.open("./ganados.txt");
 				if(equipo1.size()==0){
 					escribir<<"Gano equipo 2"<<endl;
-					
+					for(int i=0; i<equipo2.size(); i++){
+						escribir<<equipo2[i]->getNombre()<<"/"
+						<<equipo2[i]->getP_vida()<<"/"
+						<<equipo2[i]->getP_fuerza()<<"/"
+						if(typeid(equipo2[i])==typeid(Asalto))
+						{
+							<<equipo2[i]->getVelocidad()<<"/"
+							<<equipo2[i]->getFuerza_extra()<<"/"
+							<<"Asalto<<"/";
+						}
+						else{
+							<<equipo2[i]->getBlindaje()<<"/"
+							<<equipo2[i]->getCamuflaje()<<"/"
+							<<"Asalto<<"/";
+						}
+					}
 				}
 				else{
 					escribir<<"Gano equipo 1"<<endl;
+					for(int i=0; i<equipo1.size(); i++){
+						escribir<<equipo1[i]->getNombre()<<"/"
+						<<equipo1[i]->getP_vida()<<"/"
+						<<equipo1[i]->getP_fuerza()<<"/"
+						if(typeid(equipo1[i])==typeid(Asalto))
+						{
+							<<equipo1[i]->getVelocidad()<<"/"
+							<<equipo1[i]->getFuerza_extra()<<"/"
+							<<"Asalto<<"/";
+						}
+						else{
+							<<equipo1[i]->getBlindaje()<<"/"
+							<<equipo1[i]->getCamuflaje()<<"/"
+							<<"Asalto<<"/";
+						}
+					}
 				}
+				escribir.close();
 				break;
 				
 			case 3:
