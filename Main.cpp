@@ -22,6 +22,7 @@ int main(){
 	int rand1, rand2;
 	int cont=1;
 	int ataque;
+	ofstream escribir;
 	do{
 		switch(opc=menu()){
 			case 1:
@@ -83,6 +84,14 @@ int main(){
 					}
 					cont++;
 				}while(equipo1.size()!=0 || equipo2.size()!=0);
+				escribir.open("./ganados.txt");
+				if(equipo1.size()==0){
+					escribir<<"Gano equipo 2"<<endl;
+					
+				}
+				else{
+					escribir<<"Gano equipo 1"<<endl;
+				}
 				break;
 				
 			case 3:
